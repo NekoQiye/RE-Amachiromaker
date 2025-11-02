@@ -17,8 +17,20 @@
   <link href="./static/css/main.0f9b49cf.chunk.css" rel="stylesheet">
   <!-- 添加自定义主题CSS -->
   <link href="./static/css/custom-theme.css" rel="stylesheet">
+  <link href="./static/css/modal.css" rel="stylesheet">
 </head>
 <body>
+  <!-- 送给所有使用本项目的人 -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-content">
+      <h2>⚠️注意注意⚠️</h2>
+      <p>本项目为<strong>祈烨猫猫</strong>基于<strong>Charlie Chiangm</strong>的原项目进行二改。<br>本项目允许二改，<strong>但请在Github拉分支且标注本项目的地址</strong>呐！<br>请勿<strong>盗图说自己画的或售卖</strong>呐！<strong>违者公开展示喵~</strong><br>图片(除缩略图)版权均为<strong>甘城なつき</strong>所有。<br><strong>请勿商用或二次售卖</strong>本项目呐！<br><strong>违者自己承担一切后果呐~</strong></p>
+      <div class="modal-buttons">
+        <button id="agree-button" class="modal-button modal-button-agree">同意</button>
+        <button id="disagree-button" class="modal-button modal-button-disagree">不同意</button>
+      </div>
+    </div>
+  </div>
   <!-- 主题切换按钮 -->
   <button id="theme-toggle" class="theme-toggle" aria-label="切换深色/浅色模式">
     <svg id="theme-toggle-light-icon" class="theme-icon" viewBox="0 0 24 24" style="display: none;">
@@ -29,40 +41,41 @@
     </svg>
   </button>
   
-  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <noscript>你需要去浏览器的设置里面启用JAVA脚本才能使用本网站哦~杂鱼~</noscript>
   <div id="root"></div>
   
-  <!-- 添加项目信息区域 -->
+  <!-- 项目信息区域,不许改！！！ -->
   <div class="project-info animate__animated animate__fadeInUp">
     <div class="project-info-content">
       <h3>⭐RE:Amachiromaker⭐</h3>
       <div class="author-info">
         <p><span>项目简介：</span>复活被甘城猫猫下线的捏脸网站呐</a></p>
-        <p><span>画师：</span>甘城なつき  <a href="https://amashiro.com/" target="_blank">▶ 甘城なつき官网</a></p>
-        <p><span>改版作者：</span>祈烨猫猫  <a href="https://github.com/NekoQiye" target="_blank">▶ Github地址</a></p>
-        <p><span>原作者：</span>Charlie Chiangm  <a href="https://github.com/charlie0129" target="_blank">▶ Github地址</a></p>
-        
+        <p><span>项目图片画师：</span>甘城なつき  <a href="https://amashiro.com/" target="_blank">▶ 甘城なつき官网</a></p>
+        <p><span>缩略图&项目所有者：</span>祈烨猫猫  <a href="https://github.com/NekoQiye" target="_blank">▶ Github资料</a></p>
+        <p><span>网站运营&维护：</span>XiaoXhan1234  <a href="https://github.com/xiaoxhan1234" target="_blank">▶ Github资料</a></p>
+        <p><span>原项目作者：</span>Charlie Chiangm  <a href="https://github.com/charlie0129" target="_blank">▶ Github资料</a></p>
         <img src="neko.png" class="author-neko" alt="祈烨猫猫" />
       </div>
+      <br>
+      <h3>请勿商用本项目和本项目生成的图片！</h3>
       <a href="https://github.com/NekoQiye/RE-Amachiromaker" class="repo-button" target="_blank">
         <span>❤️ 项目仓库</span>
       </a>
     </div>
   </div>
 
-  <!-- 修改内联脚本中的资源路径 -->
   <script>!function(e){function r(r){for(var n,a,i=r[0],c=r[1],l=r[2],s=0,p=[];s<i.length;s++)a=i[s],Object.prototype.hasOwnProperty.call(o,a)&&o[a]&&p.push(o[a][0]),o[a]=0;for(n in c)Object.prototype.hasOwnProperty.call(c,n)&&(e[n]=c[n]);for(f&&f(r);p.length;)p.shift()();return u.push.apply(u,l||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,i=1;i<t.length;i++){var c=t[i];0!==o[c]&&(n=!1)}n&&(u.splice(r--,1),e=a(a.s=t[0]))}return e}var n={},o={1:0},u=[];function a(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,a),t.l=!0,t.exports}a.e=function(e){var r=[],t=o[e];if(0!==t)if(t)r.push(t[2]);else{var n=new Promise((function(r,n){t=o[e]=[r,n]}));r.push(t[2]=n);var u,i=document.createElement("script");i.charset="utf-8",i.timeout=120,a.nc&&i.setAttribute("nonce",a.nc),i.src=function(e){return a.p+"static/js/"+({}[e]||e)+"."+{3:"d88bd067",4:"43d507be"}[e]+".chunk.js"}(e);var c=new Error;u=function(r){i.onerror=i.onload=null,clearTimeout(l);var t=o[e];if(0!==t){if(t){var n=r&&("load"===r.type?"missing":r.type),u=r&&r.target&&r.target.src;c.message="Loading chunk "+e+" failed.\n("+n+": "+u+")",c.name="ChunkLoadError",c.type=n,c.request=u,t[1](c)}o[e]=void 0}};var l=setTimeout((function(){u({type:"timeout",target:i})}),12e4);i.onerror=i.onload=u,document.head.appendChild(i)}return Promise.all(r)},a.m=e,a.c=n,a.d=function(e,r,t){a.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},a.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.t=function(e,r){if(1&r&&(e=a(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(a.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)a.d(t,n,function(r){return e[r]}.bind(null,n));return t},a.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(r,"a",r),r},a.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},a.p="./",a.oe=function(e){throw console.error(e),e};var i=this["webpackJsonpamachiromaker-clone"]=this["webpackJsonpamachiromaker-clone"]||[],c=i.push.bind(i);i.push=r,i=i.slice();for(var l=0;l<i.length;l++)r(i[l]);var f=c;t()}([])  </script>
 
-  <!-- 修改 JS 文件路径 -->
   <script src="./static/js/2.78bd1ab9.chunk.js"></script>
   <script src="./static/js/main.72370a41.chunk.js"></script>
+  <script src="./static/js/modal.js"></script>
 </body>
 <script>
 document.addEventListener('contextmenu', e => e.preventDefault());
-// 添加猫娘气泡对话功能
+// 添加猫猫气泡对话功能w
 const nekoMessages = [
   '喵~今天的你也要元气满满喵~',
-  '要摸摸头我的嘛？',
+  '要摸摸我的头嘛？',
   '尾..尾巴不可以摸喵！所以我藏起来啦~',
   '尾巴被抓住啦~快放开喵~',
   '呼噜呼噜~好困喵~',
@@ -76,10 +89,12 @@ const nekoMessages = [
   '悄悄告诉你个秘密...逗你玩的啦，喵~',
   '喵喵拳！(ノ≧∇≦)ノ',
   '下面的这个按钮按起来好有趣喵~',
+  '杂鱼杂鱼~',
+  '喵喵~咕噜咕噜~',
   '今天的你也闪闪发亮呢喵~'
 ];
 
-// 动态添加气泡动画关键帧
+// 添加气泡动画关键帧
 const bubbleStyle = document.createElement('style');
 bubbleStyle.textContent = `
 @keyframes bubbleAppear {
@@ -133,24 +148,24 @@ document.querySelectorAll('img').forEach(img => {
   img.draggable = false;
 });
 
-// 主题切换功能
+// 主题切换功能~
 const themeToggleBtn = document.getElementById('theme-toggle');
 const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
 
-// 检查用户偏好
+// 检查用户偏好~
 const getThemePreference = () => {
-  // 检查本地存储中的主题偏好
+  // 检查本地存储中的主题偏好~
   const storedTheme = localStorage.getItem('theme');
   if (storedTheme) {
     return storedTheme;
   }
   
-  // 检查系统偏好
+  // 检查系统偏好~
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 };
 
-// 设置主题
+// 设置主题w
 const setTheme = (theme) => {
   if (theme === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
@@ -164,16 +179,13 @@ const setTheme = (theme) => {
   localStorage.setItem('theme', theme);
 };
 
-// 初始化主题
 setTheme(getThemePreference());
 
-// 添加主题切换事件监听器
 themeToggleBtn.addEventListener('click', () => {
   const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
   setTheme(currentTheme);
 });
 
-// 监听系统主题变化
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
   const newTheme = e.matches ? 'dark' : 'light';
   setTheme(newTheme);
