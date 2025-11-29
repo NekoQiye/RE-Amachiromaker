@@ -33,7 +33,8 @@
 
 项目已部署在服务器上,可以直接访问喵:
 
-**https://www.hutaotao.top/amachiromaker/**
+主选地址：**https://nacho.zako.wf/**
+备选地址：**https://www.hutaotao.top/amachiromaker/**
 
 ## 📸 预览
 
