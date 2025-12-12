@@ -2,7 +2,7 @@
 
 > 这个项目复活了被甘城猫猫下线的捏脸网站喵~
 
-本项目基于 [Charlie Chiang](https://github.com/charliechiangm) 的 Amachiromaker 进行了 UI 大修喵~
+本项目基于 [Charlie Chiang](https://github.com/charlie0129) 的 Amachiromaker 进行了 UI 大修喵~
 
 ## ✨ 特点
 
