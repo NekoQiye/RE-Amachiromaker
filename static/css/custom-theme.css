@@ -835,6 +835,8 @@ a {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-delay: 0.01ms !important;
+    /* 必须同时限制迭代次数，否则 infinite 动画会以每帧上千次循环，表现为剧烈抖动 */
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }
@@ -994,4 +996,14 @@ html {
     from { transform: translateY(-50%) rotate(-2deg); }
     to { transform: translateY(-50%) rotate(2deg); }
   }
+}
+
+/* 深色模式下为缩略图提供浅色衬底：贴图为透明背景的 PNG，
+   深色容器会让深色线条图案不可见 */
+[data-theme='dark'] .item-image,
+[data-theme='dark'] .item-image-selected,
+[data-theme='dark'] .tab-image,
+[data-theme='dark'] .color-image,
+[data-theme='dark'] .color-image-selected {
+  background-color: #eef0f4;
 }

@@ -117,16 +117,26 @@ document.querySelector('.author-neko').addEventListener('click', function(e) {
   bubble.style.color = '#fdeeff';
   bubble.style.fontSize = '14px';
   bubble.style.fontWeight = '500';
-  bubble.style.whiteSpace = 'nowrap';
+  bubble.style.whiteSpace = 'normal';
+  bubble.style.maxWidth = 'min(240px, calc(100vw - 24px))';
+  bubble.style.boxSizing = 'border-box';
+  bubble.style.overflowWrap = 'break-word';
+  bubble.style.zIndex = '2000';
   bubble.style.animation = 'bubbleAppear 0.3s ease-out';
   
   const rect = this.getBoundingClientRect();
   // 修改后..好累喵
   bubble.style.top = `${rect.top + window.scrollY - 100}px`;
-  bubble.style.left = `${rect.left + window.scrollX + rect.width/2 - 50}px`;
   
   bubble.textContent = nekoMessages[Math.floor(Math.random() * nekoMessages.length)];
   document.body.appendChild(bubble);
+  
+  // 挂载后测量宽度，把气泡限制在视口内
+  const bubbleWidth = bubble.offsetWidth;
+  const centeredLeft = rect.left + window.scrollX + rect.width/2 - bubbleWidth/2;
+  const minLeft = window.scrollX + 8;
+  const maxLeft = window.scrollX + window.innerWidth - bubbleWidth - 8;
+  bubble.style.left = `${Math.max(minLeft, Math.min(centeredLeft, maxLeft))}px`;
   
   isBubbleActive = true;
 setTimeout(() => {
